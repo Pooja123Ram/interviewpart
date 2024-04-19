@@ -1,0 +1,14 @@
+<!-- Inside src/app/file-upload-download/file-upload-download.component.html -->
+<!-- Inside src/app/upload-download/upload-download.component.html -->
+
+<div>
+  <input type="file" (change)="handleFileInput($event)">
+  <button (click)="uploadFile()">Upload File</button>
+</div>
+
+<div *ngIf="fileToUpload">
+  <p>File Name: {{ fileToUpload.name }}</p>
+  <button (click)="downloadFile($event)">Download File</button>
+</div>
+
+  

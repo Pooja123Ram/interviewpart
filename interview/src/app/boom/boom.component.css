@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:wght@300;400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.imaglogo{
+  width: 60px;
+  height: 50px;
+  margin-left: 50px;
+  margin-top: 5px;
+  }
+  .row header{
+    height: 100px;
+    background-color: rgb(255,110,7);
+    border: 1px solid white;
+    width: auto;
+}
+.container-fluid{
+    height: 90px;
+    border: 1px solid white;
+    width: 1360px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+.comapny_name{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.logout{
+    width: 100px;
+    height: 32px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(255,110,7);
+    font-size: 18px;
+    margin-top: 25px;
+    margin-left: 240px;
+    border: 1px solid white;
+}
+.container{
+  /* width: 1600px; */
+  height:460px;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  margin-left: 100px;
+  margin-top: 30px;
+  border-radius: 10px;
+
+}
+button {
+  margin-right: 8px;
+}
+.modal-dialog{
+  margin-top: 150px;
+  margin-left: 730px;
+  
+}
+.modal-header{
+  background-color:rgb(242,246,252);
+}
+.modal-content {
+  height: 450px; 
+  width: 500px;
+  /* overflow-y: auto; */
+}
+.btn-close{
+  margin-left: 330px;
+}
+
+.email-composer {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: -20px;
+
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.lable_login{
+  color: white;
+  font-size: 15px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0 ,0 , 0.9);
+  height: 7px;
+}
+
+.form-group input {
+  border: none; 
+  border-bottom: 1px solid #ced4da; 
+  border-radius: 1px;
+  width: 470px;
+  margin-left: 7px;
+  height: 35px;
+  margin-top: 2px;
+}
+
+.textarea-container {
+  overflow-y: auto;
+  margin-left: 7px;
+  border: none; /* Ensure no border */
+  border-radius: 4px;
+}
+
+textarea.form-control {
+  width: 480px;
+  resize: vertical;
+  height: 200px;
+  border: none; 
+  outline: none; /* Remove default outline */}
+
+.attachment-button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 23px;
+  margin-left: 15px;
+  margin-top: -40px;
+
+}
+.material-icons{
+  margin-left: 280px;
+  margin-top: -25px;
+
+}

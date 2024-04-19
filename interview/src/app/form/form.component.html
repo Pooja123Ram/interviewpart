@@ -1,0 +1,37 @@
+<form #employeeForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <!-- Employee Form -->
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" [(ngModel)]="employee.name" required><br>
+  
+    <label for="role">Role:</label><br>
+    <input type="text" id="role" name="role" [(ngModel)]="employee.role" required><br>
+  
+    <label for="employeeid">Employee ID:</label><br>
+    <input type="text" id="employeeid" name="employeeid" [(ngModel)]="employee.employeeId" required><br>
+  
+    <label for="companyname">Company Name:</label><br>
+    <input type="text" id="companyname" name="companyname" [(ngModel)]="employee.companyName" required><br>
+  
+    <label for="designation">Designation:</label><br>
+    <input type="text" id="designation" name="designation" [(ngModel)]="employee.designation" required><br>
+  
+    <button type="submit" [disabled]="employeeForm.invalid">Submit</button>
+  </form>
+  
+  <!-- Company Details Form -->
+  <div *ngIf="showCompanyDetailsForm">
+    <h3>Company Provided Details Form</h3>
+    <form (ngSubmit)="onCompanyDetailsSubmit()">
+      <label for="idCard">ID Card:</label>
+      <input type="checkbox" id="idCard" name="idCard" [(ngModel)]="companyDetails.idCard"><br>
+  
+      <label for="laptop">Laptop:</label>
+      <input type="checkbox" id="laptop" name="laptop" [(ngModel)]="companyDetails.laptop"><br>
+  
+      <label for="charger">Charger:</label>
+      <input type="checkbox" id="charger" name="charger" [(ngModel)]="companyDetails.charger"><br>
+  
+      <button type="submit">Submit Company Details</button>
+    </form>
+  </div>
+  

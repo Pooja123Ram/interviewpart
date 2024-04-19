@@ -1,0 +1,10 @@
+<div class="progress-container">
+    <div class="progress-bar" [style.width.%]="progressValue"></div>
+    <div class="progress-label">{{ progressValue }}%</div>
+  </div>
+  
+  <button (click)="increaseProgress()">Increase</button>
+  <button (click)="decreaseProgress()">Decrease</button>
+  <button (click)="resetProgress()">Reset</button>
+  <button (click)="setCustomProgress(100)">Set Custom Value</button>
+  

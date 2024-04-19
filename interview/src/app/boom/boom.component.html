@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container-fluid col-12 col-md-4 col-sm-6">
+    <div class="row main_header">
+      <div class="col-12 col-md-4 col-sm-6 logo_header">
+        <div class="row">
+          <div class="col">
+            <img class="imaglogo" src="/assets/uhlogo.png">
+
+          </div>
+          <div class="col">
+            <h3 class="mb-3 mt-4 pe-5" dir="rtl"><strong> <span style="color: rgb(255,110,7);">U</span>nique<span
+              style="color: rgb(255,110,7);">HR</span> </strong></h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 wishes">
+        <!-- <h4>{{greeting}}</h4> -->
+      </div>
+      <div class="col-md-4 col-sm-12 right_side">
+        <em class="fa-sharp fa-solid fa-gear"></em>
+        <button class="logout" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="main-tab">
+      <button style="margin-top: 60px;margin-left: 20px;" mat-raised-button data-bs-toggle="modal"
+        data-bs-target="#exampleModal" (click)="resetForm()">Compose</button>
+    </div>
+    <div class="dialog">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" style="margin-left: 10px;" id="exampleModalLabel">New Message</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="client">
+                <form (ngSubmit)="sendEmail()" #emailForm="ngForm">
+                  <div class="form-group">
+                    <input class="input_login form-control" type="email" id="from" name="from" required
+                      [(ngModel)]="email.from" placeholder="From">
+                  </div>
+                  <div class="form-group">
+                    <input class="input_login form-control" type="email" id="to" name="to" required
+                      [(ngModel)]="email.to" placeholder="To">
+                  </div>
+                  <div class="form-group">
+                    <input class="input_login form-control" type="text" id="subject" name="subject" required
+                      [(ngModel)]="email.subject" placeholder="Subject">
+                  </div>
+                  <div class="form-group  textarea-container " >
+                    <textarea class="form-control" id="body" name="body" rows="5" required
+                      [(ngModel)]="email.body"></textarea>
+                  </div>
+                  <div class="form-group">
+                
+                      <button type="submit" class="btn btn-primary" [disabled]="emailForm.invalid"
+                      data-bs-dismiss="modal">Send Email</button>
+                      <!-- uploadfile -->
+                      <button type="button" (click)="selectFile()" class="attachment-button">
+                        <i class="bi bi-paperclip"></i>
+                      </button>
+                      {{ attachment ? attachment.name : '' }}
+                      <input type="file" id="attachment" (change)="handleFileInput($event)" style="display: none;">
+                      <i class="material-icons" data-toggle="tooltip" title="Delete" data-bs-dismiss="modal" >&#xE872;</i>
+                  </div>
+               
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
